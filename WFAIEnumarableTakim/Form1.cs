@@ -88,20 +88,20 @@ namespace WFAIEnumarableTakim
                 if (takim.FutbolcuBul(txtFutbolcuAraAdSoyad.Text) != null)
                     MessageBox.Show(takim.FutbolcuBul(txtFutbolcuAraAdSoyad.Text).ToString());
                 else
-                    MessageBox.Show("Aradığınız Futbolcu Bulunamadı..!");
+                    MessageBox.Show("Aradığınız Futbolcu Listede Yok!");
             }
             else
             {
                 if (takim.FutbolcuBul((byte)nudFormaNoAra.Value) != null)
                     MessageBox.Show(takim.FutbolcuBul((byte)nudFormaNoAra.Value).ToString());
                 else
-                    MessageBox.Show("Aradığınız Futbolcu Bulunamadı..!");
+                    MessageBox.Show("Aradığınız Futbolcu Listede Yok!");
             }
         }
 
         private void btnMevkiiAra_Click(object sender, EventArgs e)
         {
-            takim.MevkiiyeGöreGetir((MevkiiEnum)cboMevkiiAra.SelectedItem).ForEach(x => MessageBox.Show(x.FormaNo + " - " + x.AdSoyad + " - " + x.Mevkii));
+            takim.MevkiiyeGöreGetir((MevkiiEnum)cboMevkiiAra.SelectedItem).ForEach(x => MessageBox.Show(x.FormaNo + "  " + x.AdSoyad + "  " + x.Mevkii));
         }
     }
 }
